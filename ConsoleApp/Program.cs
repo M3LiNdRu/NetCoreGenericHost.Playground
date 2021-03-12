@@ -20,7 +20,6 @@ namespace ConsoleApp
                 {
                     //overiding Microsoft.Extensions.Hosting.Internal.ConsoleLifetime
                     services.AddSingleton<IHostLifetime, ExampleHostLifetime>();
-
                     services.AddHostedService<HostedService>();
                 });
     }

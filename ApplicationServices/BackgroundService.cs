@@ -4,9 +4,9 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace ApplicationServices
 {
-    internal class BackgroundService : Microsoft.Extensions.Hosting.BackgroundService
+    public class BackgroundService : Microsoft.Extensions.Hosting.BackgroundService
     {
         private readonly Guid _id;
 

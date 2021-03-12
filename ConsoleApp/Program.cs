@@ -17,7 +17,8 @@ namespace ConsoleApp
                 {
                     //overiding Microsoft.Extensions.Hosting.Internal.ConsoleLifetime
                     //services.AddSingleton<IHostLifetime, ExampleHostLifetime>();
-                    services.AddHostedService<BackgroundService>();
+                    services.AddHostedService<ApplicationServices.HostedService>();
+                    services.AddHostedService<ApplicationServices.BackgroundService>();
                 });
     }
 }

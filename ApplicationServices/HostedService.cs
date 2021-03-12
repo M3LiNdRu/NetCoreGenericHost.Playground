@@ -4,9 +4,9 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace ApplicationServices
 {
-    internal class HostedService : IHostedService
+    public class HostedService : IHostedService
     {
         private readonly Guid _id;
 

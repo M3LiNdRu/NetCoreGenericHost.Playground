@@ -27,8 +27,6 @@ namespace ApplicationServices
             await Task.Delay(10000);
 
             _logger.LogInformation("Finished background task in background service id {id}", _id);
-
-            _applicationLifetime.StopApplication();
         }
     }
 }

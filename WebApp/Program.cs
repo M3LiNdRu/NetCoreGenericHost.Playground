@@ -1,12 +1,8 @@
+using ApplicationServices.Modules;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace WebApp
 {
@@ -22,6 +18,7 @@ namespace WebApp
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseKestrel();
                 })
                 .ConfigureServices((hostContext, services) =>
                         {
@@ -29,6 +26,8 @@ namespace WebApp
                     //services.AddSingleton<IHostLifetime, ExampleHostLifetime>();
                     services.AddHostedService<ApplicationServices.HostedService>();
                     services.AddHostedService<ApplicationServices.BackgroundService>();
+
+                    services.AddSingleton<ICommonModule, CommonModule>();
                 });
     }
 }

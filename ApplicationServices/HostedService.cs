@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationServices
 {
-    public class HostedService : IHostedService
+    public class HostedService : Microsoft.Extensions.Hosting.IHostedService
     {
         private readonly Guid _id;
 
